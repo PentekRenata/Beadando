@@ -1,1 +1,16 @@
-
+def leghosszabb():
+    mondat=input("Adjon meg egy mondatot:")
+    szavak=mondat.split(" ")
+    for i in szavak:
+        if i==i[::-1]:
+            return i
+    return None
+def szamol():
+    max=0
+    a=leghosszabb()
+    for str in a:
+        b=len(a[str])
+        if b>max:
+            max=b
+        print(max)
+szamol()
