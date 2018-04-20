@@ -6,3 +6,15 @@ def oszto():
             print(i)
             break
 oszto()
+OR
+def oszto(szam):
+    for i in range(1,21):
+        if szam%i!=0:
+            return False
+    return True
+szam=232792558
+while True:
+    if oszto(szam):
+        break
+    szam+=1
+print(szam)
