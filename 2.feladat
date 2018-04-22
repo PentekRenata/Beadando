@@ -1,1 +1,8 @@
 # Beadando
+def toDigits(szam,szamrendszer):
+    digits=[]
+    while szam>0:
+        digits.insert(0,szam%szamrendszer)
+        szam=szam//szamrendszer 
+    return digits
+print(toDigits(208,3)
