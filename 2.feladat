@@ -1,8 +1,7 @@
 # Beadando
-def toDigits(szam,szamrendszer):
-    digits=[]
+def szamrendszerbol(szam,szamrendszer):
+    maradek=[]
     while szam>0:
-        digits.insert(0,szam%szamrendszer)
+        maradek.insert(0,szam%szamrendszer)
         szam=szam//szamrendszer 
-    return digits
-print(toDigits(208,3)
+    return maradek
