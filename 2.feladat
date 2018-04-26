@@ -11,6 +11,6 @@ def tizes(maradek, szamrendszer):#azt a számot keressük ami a 10-es számrends
         szam=szamrendszer*szam+d
         print(szam)
     return szam
-def szamrendszerek(maradek, szamrendszer, szamrendszerre):#átkonvertelják arra a számra amire kell a tizesbol
+def szamrendszerek(maradek, szamrendszer, szamrendszerre):
     return szamrendszerbol(tizes(maradek, szamrendszer), szamrendszerre)
-print(szamrendszerek([1,1,2,0], 3, 2))"""
+print(szamrendszerek([1,1,2,0], 3, 2))
