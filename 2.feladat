@@ -5,3 +5,12 @@ def szamrendszerbol(szam,szamrendszer):
         maradek.insert(0,szam%szamrendszer)
         szam=szam//szamrendszer 
     return maradek
+def tizes(maradek, szamrendszer):#azt a számot keressük ami a 10-es számrendszerbe van
+    szam=0
+    for d in maradek:
+        szam=szamrendszer*szam+d
+        print(szam)
+    return szam
+def szamrendszerek(maradek, szamrendszer, szamrendszerre):#átkonvertelják arra a számra amire kell a tizesbol
+    return szamrendszerbol(tizes(maradek, szamrendszer), szamrendszerre)
+print(szamrendszerek([1,1,2,0], 3, 2))"""
