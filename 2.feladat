@@ -5,7 +5,7 @@ def szamrendszerbol(szam,szamrendszer):
         maradek.insert(0,szam%szamrendszer)
         szam=szam//szamrendszer 
     return maradek
-def tizes(maradek, szamrendszer):#azt a számot keressük ami a 10-es számrendszerbe van
+def tizes(maradek, szamrendszer):
     szam=0
     for d in maradek:
         szam=szamrendszer*szam+d
