@@ -15,3 +15,16 @@ def leghosszabb():
             szo=j
     return szo
 print(leghosszabb())
+OR
+
+def leghosszabb():
+    mondat=input("Adjon meg egy mondatot:")
+    mondat=mondat.lower()
+    szavak=mondat.split()
+    uj=""
+    malom=""
+    for i in szavak:
+        uj+=i
+    while uj==uj[::-1]:
+        print(uj)
+        break
