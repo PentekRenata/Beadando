@@ -28,3 +28,4 @@ def leghosszabb():
     while uj==uj[::-1]:
         print(uj)
         break
+leghosszabb()
