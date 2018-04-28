@@ -30,4 +30,4 @@ def leghosszabb():
         for b in uj:
             while b==c:
                 return
-leghosszabb()
+print(leghosszabb())
