@@ -25,7 +25,9 @@ def leghosszabb():
     malom=""
     for i in szavak:
         uj+=i
-    while uj==uj[::-1]:
-        print(uj)
-        break
+ palindrom=uj[::-1]
+    for c in palindrom:
+        for b in uj:
+            while b==c:
+                return
 leghosszabb()
