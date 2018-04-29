@@ -22,10 +22,9 @@ def leghosszabb():
     mondat=mondat.lower()
     szavak=mondat.split()
     uj=""
-    malom=""
     for i in szavak:
         uj+=i
- palindrom=uj[::-1]
+    palindrom=uj[::-1]
     for c in palindrom:
         for b in uj:
             while b==c:
