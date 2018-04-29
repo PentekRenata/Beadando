@@ -6,6 +6,7 @@ def oszto():
             print(i)
             break
 oszto()
+
 OR
 def oszto(szam):
     for i in range(1,21):
