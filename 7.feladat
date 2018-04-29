@@ -25,8 +25,8 @@ def leghosszabb():
     for i in szavak:
         uj+=i
     palindrom=uj[::-1]
-    for c in palindrom:
-        for b in uj:
-            while b==c:
-                return
-print(leghosszabb())
+    for j in range(len(szavak)):
+        while uj[j]==pali[j]:
+            l+=uj[j]
+    print(l)
+leghosszabb()
