@@ -19,3 +19,14 @@ while True:
     szam+=1
 print(szam)
 OR
+def oszto(szam):
+    for i in range(1,21):
+        if szam%i!=0:
+            return False
+    return True
+szam=20
+while True:
+    if oszto(szam):
+        break
+    szam+=20
+print(szam)
