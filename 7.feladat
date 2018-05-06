@@ -1,3 +1,4 @@
+#Első próbálkozás úgy,hogy szavak szintén nézem meg, hogy melyik a leghosszabb palindrom 
 def leghosszabb():
     mondat=input("Adjon meg egy mondatot:")
     szavak=mondat.split(" ")
@@ -15,17 +16,29 @@ def leghosszabb():
             szo=j
     return szo
 print(leghosszabb())
-OR
-def leghosszabb():
-    mondat=input("Adjon meg egy mondatot:")
-    mondat=mondat.lower()
-    szavak=mondat.split()
-    uj=""
-    for i in szavak:
-        uj+=i
-    palindrom=uj[::-1]
-    for j in range(len(szavak)):
-        while uj[j]==pali[j]:
-            l+=uj[j]
-    print(l)
-leghosszabb()
+#Sztingenként megnézem a palindromokat
+def megfordit(szoveg):
+	return szoveg[::-1]
+def ures(szoveg):
+    for i in range(len(szoveg)):
+        if szoveg.__contains__(" "):
+            szoveg=szoveg.replace(" ","")
+        if szoveg.__contains__(","):
+            szoveg=szoveg.replace(",","")
+        if szoveg.__contains__("."):
+            szoveg=szoveg.replace(".","")
+        if szoveg.__contains__("!"):
+            szoveg=szoveg.replace("!","")
+        if szoveg.__contains__("?"):
+            szoveg=szoveg.replace("?","")
+    return szoveg.lower()
+def palindromic(szo):
+	max=""
+	for a in range(len(szo)):
+		for b in range(len(szo),-1,-1):
+			if ures(szo[a:b])==ures(megfordit(szo[a:b])) and len(szo[a:b])>len(max):
+				max=szo[a:b]
+	return max
+
+szo="banana"
+print(palindromic(szo))
