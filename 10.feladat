@@ -1,3 +1,4 @@
+#első verzió
 def oszto():
     i=20
     while 1:
@@ -6,7 +7,7 @@ def oszto():
             print(i)
             break
 oszto()
-OR
+#második verzió
 def oszto(szam):
     for i in range(1,21):
         if szam%i!=0:
@@ -18,7 +19,7 @@ while True:
         break
     szam+=1
 print(szam)
-OR
+#harmadik verzió
 def oszto(szam):
     for i in range(1,21):
         if szam%i!=0:
