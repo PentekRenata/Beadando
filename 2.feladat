@@ -1,14 +1,14 @@
 # Beadando
 def hetes(melyik_szamrendszerbol,szamrendszer,melyik_szamrendszerre):
     list=szamrendszer[::-1]
-    szam=0
+    szam=0#tizes szamrendszerbeli szam
     for i in range(len(szamrendszer)):
         uj=melyik_szamrendszerbol**i*list[i]
         szam+=uj
     maradek=[]
     while szam>0:
         ujk=szam%melyik_szamrendszerre
-        maradek.insert(0,ujk)
+        maradek.insert(0,ujk)#0.helyre beszurjuk az ujk-t
         szam=szam//melyik_szamrendszerre
     return maradek
 print(hetes(2,[1,1,1,0],5))
