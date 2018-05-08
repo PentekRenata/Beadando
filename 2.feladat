@@ -1,16 +1,13 @@
 # Beadando
-def szamrendszerbol(szam,szamrendszer):
+def hetes(melyik_szamrendszerbol,szamrendszer,melyik_szamrendszerre):
+    list=szamrendszer[::-1]
+    szam=0
+    for i in range(len(szamrendszer)):
+        uj=melyik_szamrendszerbol**i*list[i]
+        szam+=uj
     maradek=[]
     while szam>0:
-        maradek.insert(0,szam%szamrendszer)
-        szam=szam//szamrendszer 
+        maradek.insert(0,szam%melyik_szamrendszerre)
+        szam=szam//melyik_szamrendszerre
     return maradek
-def tizes(maradek, szamrendszer):
-    szam=0
-    for d in maradek:
-        szam=szamrendszer*szam+d
-        print(szam)
-    return szam
-def szamrendszerek(maradek, szamrendszer, szamrendszerre):
-    return szamrendszerbol(tizes(maradek, szamrendszer), szamrendszerre)
-print(szamrendszerek([1,1,2,0], 3, 2))
+print(hetes(2,[1,1,1,0],5))
