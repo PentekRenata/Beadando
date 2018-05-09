@@ -1,14 +1,14 @@
 # Beadando
 def hetes(melyik_szamrendszerbol,szamrendszer,melyik_szamrendszerre):
-    list=szamrendszer[::-1]
+    list=szamrendszer[::-1]#számrendszerbeli tagokat megcserélem
     szam=0#tizes szamrendszerbeli szam
     for i in range(len(szamrendszer)):
-        uj=melyik_szamrendszerbol**i*list[i]
+        uj=melyik_szamrendszerbol**i*list[i]#2^0*a számrednszerbeli utolsó,de az első a megfordítás miatt
         szam+=uj
     maradek=[]
     while szam>0:
         ujk=szam%melyik_szamrendszerre
-        maradek.insert(0,ujk)#0.helyre beszurjuk az ujk-t
+        maradek.insert(0,ujk)#0.helyre beszurjuk az ujk-t,tolódik
         szam=szam//melyik_szamrendszerre
     return maradek
 print(hetes(2,[1,1,1,0],5))
