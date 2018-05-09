@@ -17,28 +17,25 @@ def leghosszabb():
     return szo
 print(leghosszabb())
 #Sztingenként megnézem a palindromokat
-def megfordit(szoveg):
-	return szoveg[::-1]
-def ures(szoveg):
-    for i in range(len(szoveg)):
-        if szoveg.__contains__(" "):
-            szoveg=szoveg.replace(" ","")
-        if szoveg.__contains__(","):
-            szoveg=szoveg.replace(",","")
-        if szoveg.__contains__("."):
-            szoveg=szoveg.replace(".","")
-        if szoveg.__contains__("!"):
-            szoveg=szoveg.replace("!","")
-        if szoveg.__contains__("?"):
-            szoveg=szoveg.replace("?","")
-    return szoveg.lower()
-def palindromic(szo):
-	max=""
-	for a in range(len(szo)):
-		for b in range(len(szo),-1,-1):
-			if ures(szo[a:b])==ures(megfordit(szo[a:b])) and len(szo[a:b])>len(max):
-				max=szo[a:b]
-	return max
-
-szo="banana"
-print(palindromic(szo))
+def megfordit(szo):
+    palindrom=szo[::-1]
+    if szo==palindrom:
+        return True
+    else:
+        return False
+def osszes(szo):
+  lista = []
+  for i in range(len(szo)):
+    for j in range(i,len(szo)+1):#[0,3]-->apa 
+        lista.append(szo[i:j])#[0,0] stb.
+  return lista
+def leghosszabb(szo):
+    resze=osszes(szo)
+    max=0
+    for k in resze:
+       if megfordit(k) and len(k)>max:#ha megegyezik a fordítotjával akkor őt is belevesszük a stringek számolásába
+            max=len(k)
+            max_kiir=k
+    return max_kiir
+szo = input("Adjon meg egy sztringet:")
+print(leghosszabb(szo))
