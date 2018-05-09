@@ -16,7 +16,7 @@ def leghosszabb():
             szo=j
     return szo
 print(leghosszabb())
-#Sztingenként megnézem a palindromokat
+#Sztringenként megnézem a palindromokat
 def megfordit(szo):
     palindrom=szo[::-1]
     if szo==palindrom:
@@ -24,16 +24,16 @@ def megfordit(szo):
     else:
         return False
 def osszes(szo):
-  lista = []
+  lista=[]
   for i in range(len(szo)):
-    for j in range(i,len(szo)+1):#[0,3]-->apa 
-        lista.append(szo[i:j])#[0,0] stb.
+    for j in range(len(szo)+1):#[0,3],rakja be a listába az egész szót is
+        lista.append(szo[i:j])#"ba"
   return lista
 def leghosszabb(szo):
     resze=osszes(szo)
     max=0
     for k in resze:
-       if megfordit(k) and len(k)>max:#ha megegyezik a fordítotjával akkor őt is belevesszük a stringek számolásába
+       if megfordit(k) and len(k)>max:
             max=len(k)
             max_kiir=k
     return max_kiir
